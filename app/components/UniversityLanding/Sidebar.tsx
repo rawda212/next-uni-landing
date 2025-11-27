@@ -19,7 +19,7 @@ export default function Sidebar({
       {/* Mobile Menu Button */}
       <button 
         onClick={onMenuToggle}
-        className="lg:hidden fixed top-6 left-6 z-50 p-2.5 bg-gray-800/80 backdrop-blur rounded-lg"
+        className="lg:hidden absolute top-6 left-6 z-50 p-2.5 bg-gray-800/80 backdrop-blur rounded-lg"
       >
         {isMenuOpen ? (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-white">
@@ -34,7 +34,7 @@ export default function Sidebar({
 
       {/* Sidebar */}
       <aside className={`
-        fixed left-0 top-0 h-full w-48 flex flex-col justify-between py-10 px-6 z-40
+        absolute left-0 top-0 h-full w-48 flex flex-col justify-between py-10 px-6 z-40
         transition-transform duration-500 bg-gradient-to-b from-[#2d3238] to-[#1c1e22]
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
@@ -64,7 +64,7 @@ export default function Sidebar({
 
       {/* Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/50 z-30" onClick={onMenuToggle} />
+        <div className="lg:hidden absolute inset-0 bg-black/50 z-30" onClick={onMenuToggle} />
       )}
     </>
   );

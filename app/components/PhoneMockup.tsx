@@ -29,7 +29,7 @@ export default function PhoneMockup({ onClick }: PhoneMockupProps) {
     setTimeout(() => {
       setCurrentPage("search");
       onClick();
-    }, 800);
+    }, 500);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -42,8 +42,8 @@ export default function PhoneMockup({ onClick }: PhoneMockupProps) {
     const deltaX = (e.clientX - centerX) / (rect.width / 2);
     const deltaY = (e.clientY - centerY) / (rect.height / 2);
     
-    const rotateY = deltaX * 15;
-    const rotateX = -deltaY * 15; 
+    const rotateY = deltaX * 30;
+    const rotateX = -deltaY * 30; 
     
     setRotation({ x: rotateX, y: rotateY });
   };
@@ -53,7 +53,7 @@ export default function PhoneMockup({ onClick }: PhoneMockupProps) {
   };
 
   return (
-    <div className="flex items-center justify-center relative animate-slide-in-right h-auto md:h-[300px] mt-8 md:mt-20">
+    <div className="flex items-center justify-center relative animate-slide-in-right h-auto md:h-[400px] mt-8 md:mt-20">
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-10 blur-3xl animate-pulse"></div>
 
@@ -72,7 +72,7 @@ export default function PhoneMockup({ onClick }: PhoneMockupProps) {
         }}
       >
         {/* Phone Frame */}
-        <div className="relative w-64 h-[520px] md:w-72 md:h-[580px] bg-black rounded-[2.5rem] md:rounded-[3rem] p-2 md:p-3 shadow-2xl">
+        <div className="relative w-65 h-[400px] md:w-72 md:h-[500px] md:mb-20 bg-black rounded-[2.5rem] md:rounded-[3rem] p-2 md:p-3 shadow-2xl">
           <div className="w-full h-full bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden">
             {/* Phone Notch */}
             <div className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2 w-16 h-4 md:w-20 md:h-5 bg-black rounded-2xl md:rounded-3xl z-10"></div>
@@ -110,7 +110,7 @@ export default function PhoneMockup({ onClick }: PhoneMockupProps) {
               </div>
 
               {/* Filter Chips */}
-              <div className="flex gap-1 mb-1 overflow-x-auto pb-2">
+              <div className="flex gap-1 mb-1 overflow pb-2">
                 <span className="bg-blue-600 flex gap-1 text-white px-2 py-1 md:py-2 rounded-full text-xs whitespace-nowrap flex-shrink-0">
                   <LaptopMinimal size={12} className="md:w-4 md:h-4" /> Accounting
                 </span>

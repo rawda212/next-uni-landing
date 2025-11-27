@@ -75,7 +75,7 @@ export default function UniversityLanding() {
   const current = sections[activeIndex];
 
   return (
-    <div className="h-screen bg-gradient-to-br from-[#2d3238] via-[#25282d] to-[#1c1e22] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br  rounded-4xl from-[#2d3238] via-[#25282d] to-[#1c1e22] relative overflow-hidden " id="university-landing">
       <Sidebar
         sections={sections}
         activeIndex={activeIndex}
@@ -85,9 +85,9 @@ export default function UniversityLanding() {
       />
 
       {/* Main Content */}
-      <main className="lg:ml-48 h-screen flex items-center">
-        <div className="w-full max-w-7xl mx-auto px-8 lg:px-16 py-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+      <main className="lg:ml-48 min-h-screen flex items-center py-12 lg:py-6">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 ">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
             {/* Text Content */}
             <div className={`flex-1 transition-all duration-500 ${isAnimating ? 'opacity-0 translate-x-8' : 'opacity-100 translate-x-0'}`}>
               <AnimatePresence mode="wait">
