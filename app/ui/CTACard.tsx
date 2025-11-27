@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 function CTACard() {
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-8 text-white relative overflow-hidden group min-h-[300px] flex flex-col justify-between">
+    <div className="bg-gradient-to-br h-80 lg:mt-9 from-gray-900 to-black rounded-3xl p-8 text-white relative overflow-hidden group min-h-[300px] flex flex-col justify-between">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 transition-transform duration-700 group-hover:scale-110"

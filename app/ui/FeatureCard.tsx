@@ -14,14 +14,14 @@ function FeatureCard({ id, icon, title, description, isVisible, delay }: Feature
   return (
     <div
       id={id}
-      className={`animate-on-scroll relative w-full transition-all duration-700 hover:scale-105 ${
+      className={`animate-on-scroll relative w-full  transition-all duration-700 hover:scale-105 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Folder Tab Shape */}
       <svg 
-        className="w-full h-auto" 
+        className="w-full h-90" 
         viewBox="0 0 400 380" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,6 @@ function FeatureCard({ id, icon, title, description, isVisible, delay }: Feature
           </linearGradient>
         </defs>
         
-        {/* Folder Shape with Tab */}
         <path
           d="M 30 50 
              L 30 30 
